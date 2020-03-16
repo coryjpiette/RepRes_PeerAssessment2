@@ -295,7 +295,7 @@ cropPlot<- qplot(EVTYPE, data = crop, weight = cropDamage, geom = "bar", binwidt
 grid.arrange(propertyPlot, cropPlot, ncol = 2)
 ```
 
-![plot of chunk unnamed-chunk-11](chunk-11.png) 
+![plot of chunk unnamed-chunk-11](unnamed-chunk-11.png) 
 
 Based on the above histograms, we find that **flood** and **hurricane/typhoon** cause most property damage; **drought** and **flood** causes most crop damage in the United States from 1995 to 2011.
 
