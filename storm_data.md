@@ -4,7 +4,7 @@ Reproducible Research Peer Assessment 2
 ## Impact of Severe Weather Events on Public Health and Economy in the United States
 
 ### Synonpsis  
-In this report, we aim to analyze the impact of different weather events on public health and economy based on the storm database collected from the U.S. National Oceanic and Atmospheric Administration's (NOAA) from 1950 - 2011. We will use the estimates of fatalities, injuries, property and crop damage to decide which types of event are most harmful to the population health and economy. From these data, we found that excessive heat and tornado are most harmful with respect to population health, while flood, drought, and hurricane/typhoon have the greatest economic consequences.
+This analysis is meant to analyze and summarize the impact of various weather events on public health and economy based on the storm database collected from the U.S. National Oceanic and Atmospheric Administration from the years 1950 - 2011. We will use the approximated number of severe unjuries, fatalities, property and crop damage to determine which types of event are most harmful to health and the economy as a whole. In summary, it has been determined that excessive heat and tornados are most harmful with respect to population health, while flood, drought, and hurricanse/typhoons have the greatest economic consequences.
 
 ### Basic settings
 
@@ -29,7 +29,7 @@ if (!"stormData.csv.bz2" %in% dir("./data/")) {
     bunzip2("data/stormData.csv.bz2", overwrite=T, remove=F)
 }
 ```
-Then, we read the generated csv file. If the data already exists in the working environment, we do not need to load it again. Otherwise, we read the csv file.
+Next we read the generated csv file. If the data already exists in the working environment, we do not need to reload. We then review the csv file.
 
 ```r
 if (!"stormData" %in% ls()) {
@@ -63,8 +63,8 @@ head(stormData, n = 2)
 ## 1     3040      8812       3051       8806              1 1950
 ## 2     3042      8755          0          0              2 1950
 ```
-There are 902297 rows and 37 columns in total.
-The events in the database start in the year 1950 and end in November 2011. In the earlier years of the database there are generally fewer events recorded, most likely due to a lack of good records. More recent years should be considered more complete.
+There are 902,297 rows and 37 columns in total.
+The events in the database start in 1950 and end in 2011. In the earlier years of the database there are generally fewer events recorded, most likely due to a lack of good records. More recent years should be considered more complete.
 
 
 ```r
@@ -300,4 +300,4 @@ grid.arrange(propertyPlot, cropPlot, ncol = 2)
 Based on the above histograms, we find that **flood** and **hurricane/typhoon** cause most property damage; **drought** and **flood** causes most crop damage in the United States from 1995 to 2011.
 
 ### Conclusion  
-From these data, we found that **excessive heat** and **tornado** are most harmful with respect to population health, while **flood**, **drought**, and **hurricane/typhoon** have the greatest economic consequences.
+From this data: **excessive heat** and **tornado** are most harmful with respect to population health and **flood**, **drought**, and **hurricane/typhoon** have the greatest economic impacts.
